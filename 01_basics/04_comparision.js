@@ -9,7 +9,7 @@
 
 //  console.log(null > 0);  //false
 //  console.log(null >= 0);  //true
-//  console.log(null == 0);  //false
+  console.log(null == 0);  //false
 
  /*The reason is that an equality check == and comparisons > < >= <= wroks differently.
    Comparisons convert null to number, treating it as 0.
