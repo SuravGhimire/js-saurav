@@ -8,7 +8,7 @@
 //  console.log(myDate.toDateString()); //Sat Dec 30 2023
 //  console.log(myDate.toLocaleString());  //12/30/2023, 8:52:58 AM
 
- console.log(typeof myDate); //object
+// console.log(typeof myDate); //object
 
  //let myCreatedDate = new Date(2023,0,23)
  let myCreatedDate = new Date("01-14-2023")
@@ -29,4 +29,20 @@
 //   console.log(myTimeStamp); //1703930054457 milisec  // output will be a long digit ,which is in milisecond i.e from 1 jan 1970 till now  
 
 //   console.log(myCreatedDate.getTime()); //1673654400000 ms   // .getTime() helps to get the milisec value from the beganing to our myCreatredDate
-  console.log(Math.floor(Date.now()/1000));  //1703930889 sec //convert into seconds
+ // console.log(Math.floor(Date.now()/1000));  //1703930889 sec //convert into seconds
+
+ let newDate =new Date()
+//  console.log(newDate.getMonth());   //11
+//  console.log(newDate.getFullYear());  //2023
+//  console.log(newDate.getDay());     //6
+ //console.log(newDate.getDay());
+
+ //`${newDate.getDate()} and the time is `
+
+console.log( newDate.toLocaleString('default',{
+  weekday: "long",
+  month: "long",
+  timeZoneName: "long"
+  
+}));      //December Saturday at Coordinated Universal Time
+
