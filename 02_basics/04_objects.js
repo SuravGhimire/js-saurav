@@ -120,5 +120,22 @@ This is destructure of object */
 
 /******************************************************************************************************************************************************************************* */
 
+// JSON API::
 
+// {
 
+//  "name":"saurav"
+// "coursename" : "js"
+//  "price":"free"
+
+// }
+
+ //sometimes api comes in the form of api:
+
+ [
+  
+  {},
+  {},
+  {}
+
+ ]                               // ramdomuserme api   //To understand API we have some tools like jsonformator etc
