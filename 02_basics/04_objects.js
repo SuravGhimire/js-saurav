@@ -36,7 +36,7 @@ const regularUser ={
 //console.log(regularUser.fullname)              //{ UserfullName: { firstName: 'saurav', lastName: 'ghimire' }
 //console.log(regularUser.fullname.UserfullName)  //{ firstName: 'saurav', lastName: 'ghimire' }
 
-//********************************************************************************************************************************************************************* */
+/********************************************************************************************************************************************************************* */
 //COMBINING OBJECTS
 
 const obj1={1:"a",2:"b"}
@@ -48,7 +48,8 @@ const obj2={3:"a",4:"b"}
 //const obj3 = Object.assign({},obj1,obj2)   //empty value {} is taken in order to get all the possible values  , {} acts as target and other objects as a source.
    //using Object.assig we can assign as many  as objects.
 //console.log(obj3);    // { '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
-//************************************************************************************************************************************ */
+
+/************************************************************************************************************************************ */
 
 //BUT HOW WE GONE USE OBJECT::
   //USING SPREAD OPERATOR, i.e (...o1,..o2)
@@ -56,7 +57,7 @@ const obj2={3:"a",4:"b"}
 const obj3= {...obj1,...obj2} 
 // console.log(obj3);     //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 
-//********************************************************************************************************************************* */
+/********************************************************************************************************************************* */
 // SYNTAX USED WHEN THE VALUES COMES FROM DATABASE::
 
 const users = [     //array of object
@@ -83,4 +84,41 @@ users[1].email
 
 //IF NO VALUE EXIST , WE CAN ASK;;
 
-console.log(tinderUser.hasOwnProperty('islogin'));  //false
+// console.log(tinderUser.hasOwnProperty('islogin'));  //false
+
+
+/********************************************************************************************************************************************* */
+
+// OBJECT DE-STRUCTURE AND JSON API INTRO::
+//DE-STRUCTURING:
+//       Destructuring is a convenient way of extracting multiple values from data stored in (possibly nested) objects and Arrays. It can be used in locations that receive data.
+
+const course ={
+
+   courseName:"JS",
+   price:"999",
+   courseInstructor:"hitesh"
+
+}
+
+//console.log(course.courseInstructor);   //hitesh 
+/* If we have to repeatly print we cannot use same course. ..., so to make it more convinent*/
+//WE use another SYNTAX::
+
+// const {...} = course
+
+const {courseInstructor}=course
+console.log(courseInstructor);  //hitesh
+
+//WE can also give name according to ourselves like:
+
+const {courseInstructor:abc}= course
+console.log(abc); //hitesh
+
+/* So ,this is destructure, We can do destructure of any value. 
+This is destructure of object */
+
+/******************************************************************************************************************************************************************************* */
+
+
+
