@@ -135,5 +135,12 @@ function addTwoNumber (num1,num2){
 // AFTER rest :
 // console.log(calculateCartPrice(200,100,300));   //[ 200, 100, 300 ]
 
+// what if;
+function calculateCartPrice(val1,val2,...num1){
+ return num1
+}
+// console.log(calculateCartPrice(100,200,300,400));  //[ 300, 400 ]
+// IT would return the num1 as a array and neglet others.
+//-------------------------------------------------------------------------------------------
 
     
