@@ -158,9 +158,24 @@ function handleObject(anyobject){
 // handleObject(user); //usernameis saurav and price is 199
 // we can directly pass objecet :
 
-//handleObject({
+handleObject({
   username:"sam",
-  price:300
+  price :"300"
+})  //usernameis sam and price is 300
 
-})   //usernameis sam and price is 300
+//----------------------------------------------------------------------------------------------------
+
+//FUNCTION ARRAY::
+
+const myNewArray = [200,100,300]
+
+function returnSecondValue(getarray){
+  return getarray[1]
+}
+
+console.log(returnSecondValue(myNewArray)); //100
+
+// Direct pass::
+console.log(returnSecondValue([200,100,300])); //100
+
     
