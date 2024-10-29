@@ -121,4 +121,19 @@ function addTwoNumber (num1,num2){
   console.log(loginUserMessage());  //saurav just logged in 
   console.log(loginUserMessage("sam"));  //sam just logged in 
   // and if we pass argument, it will override the default value
+    //---------------------------------------------------------------------------
+  // FOR SHOPPING CARDS: where we dont know how many arguments are comimg, we have to ready our parametwer likewise.
+
+  function calculateCartPrice(...num1){
+    return num1
+ }
+ // console.log(calculateCartPrice(2));//2
+ //but if we pass more than 1;
+ // console.log(calculateCartPrice(200,100,300));  //200  it will return a 1st num only .
+
+// SO to solve it we have a rest operator ,rest = ...num1 
+// AFTER rest :
+// console.log(calculateCartPrice(200,100,300));   //[ 200, 100, 300 ]
+
+
     
