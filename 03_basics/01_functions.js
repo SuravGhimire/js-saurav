@@ -118,8 +118,8 @@ function addTwoNumber (num1,num2){
     }
     return `${username} just loggeed in `
   }
-  console.log(loginUserMessage());  //saurav just logged in 
-  console.log(loginUserMessage("sam"));  //sam just logged in 
+  // console.log(loginUserMessage());  //saurav just logged in 
+  // console.log(loginUserMessage("sam"));  //sam just logged in 
   // and if we pass argument, it will override the default value
     //---------------------------------------------------------------------------
   // FOR SHOPPING CARDS: where we dont know how many arguments are comimg, we have to ready our parametwer likewise.
@@ -143,4 +143,24 @@ function calculateCartPrice(val1,val2,...num1){
 // IT would return the num1 as a array and neglet others.
 //-------------------------------------------------------------------------------------------
 
+//FUNCTION OBJECT:
+const user ={
+  username:"saurav",
+  price:199
+
+}
+
+function handleObject(anyobject){
+  console.log(`usernameis ${anyobject.username} and price is ${anyobject.price}`);
+  
+}
+
+// handleObject(user); //usernameis saurav and price is 199
+// we can directly pass objecet :
+
+//handleObject({
+  username:"sam",
+  price:300
+
+})   //usernameis sam and price is 300
     
