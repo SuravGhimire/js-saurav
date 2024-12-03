@@ -46,5 +46,31 @@ const chai = ()=> {
     // const addTwo=(num1,num2) => {
     //     return num1+num2
     // }
+    // console.log(addTwo(3,4)); //7
+//-------------------------------------------------------------------------------------
+    //implicite return , another way of using arrow function
 
+    // const addTwo =(num1,num2) =>  num1+num2
+    
+    // console.log(addTwo(3,4)); //7
+    
+//------------------------------------------------------------------------------------
+    //another if we use {} brackets we have to use return ,but if we use small () brackets we dont need reutrn
+    // const addTwo =(num1,num2) =>  (num1+num2)
+    
+    // console.log(addTwo(3,4)); //7
+
+    //-------------Returning object ----------------
+
+    // const addTwo =(num1,num2) => {username:"saurav"}   //erro , we should rap object into prenthesis () to return objects
+    // console.log(addTwo(3,4));
+    
+
+    const addTwo = (num1,num2) => ({username:"saurav"} )  //{ username: 'saurav' }
+
+
+    //for loops ,arrow fn 
+
+    const myArray=[2,1,4,5]
+    // myArry.forEach(()=> {})
     
