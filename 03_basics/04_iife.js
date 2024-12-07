@@ -33,4 +33,8 @@
     })('saurav'); //DB CONNECTED TWO saurav
 
 
+    ((a,s) => {
+        console.log(a+s)
+    })(2,3)   //5
+
     
