@@ -45,4 +45,22 @@ if (2==="2"){
 /* temp is greater than 50.*/
 
 
+//SCOPE related ::
+
+// const score =200
+
+// if(score > 100){
+//     const power ="fly"
+//     console.log(`user power: ${power}`);
+// }
+// console.log(`user power: ${power}`);
+
+//Shorthand notation:
+
+const balance =1000
+
+if(balance > 500)  console.log("test");  //test
+
+/* if(balance > 500)  console.log("test"),
+ console.log("test2");      //test test2 ; its a e-mature code*/
 
