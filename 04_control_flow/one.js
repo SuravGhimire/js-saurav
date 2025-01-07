@@ -57,10 +57,27 @@ if (2==="2"){
 
 //Shorthand notation:
 
-const balance =1000
+// const balance =1000
 
-if(balance > 500)  console.log("test");  //test
+// if(balance > 500)  console.log("test");  //test
 
 /* if(balance > 500)  console.log("test"),
  console.log("test2");      //test test2 ; its a e-mature code*/
 
+//nesting (checking multiple conditions)
+
+const balance =1000
+if(balance < 500){
+    console.log("less than 500");
+}else if (balance < 750){
+console.log("less than 750");
+}
+else if(balance < 900)
+{
+    console.log("less than 750");
+}else(balance < 1200)
+{
+    console.log("less than 1200");
+}
+
+//less than 1200
