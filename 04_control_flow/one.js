@@ -66,18 +66,34 @@ if (2==="2"){
 
 //nesting (checking multiple conditions)
 
-const balance =1000
-if(balance < 500){
-    console.log("less than 500");
-}else if (balance < 750){
-console.log("less than 750");
-}
-else if(balance < 900)
-{
-    console.log("less than 750");
-}else(balance < 1200)
-{
-    console.log("less than 1200");
-}
+// const balance =1000
+// if(balance < 500){
+//     console.log("less than 500");
+// }else if (balance < 750){
+// console.log("less than 750");
+// }
+// else if(balance < 900)
+// {
+//     console.log("less than 750");
+// }else(balance < 1200)
+// {
+//     console.log("less than 1200");
+// }
 
 //less than 1200
+
+//Real life example ::
+
+const userLoggedIn =true
+const debitcard =true
+const loggedINfromGoogle = false
+const logInFromEmail =true
+
+if(userLoggedIn && debitcard && 2==2){   //all condn should be true to execute
+    console.log("Allow to buy course");
+}
+
+if(loggedINfromGoogle || logInFromEmail || debitcard)   // || (or)  either of one true
+{
+    console.log("User logged in");
+}
