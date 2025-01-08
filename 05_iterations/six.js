@@ -21,6 +21,7 @@ const myNums = [1,2,3,4,5,6,7,8,9,10]
  })   */
 
     
+ //------------------------------------------------------------------  
 // const newNums = myNums.filter((num) => num > 4)
 // console.log(newNums); //[ 5, 6, 7, 8, 9, 10 ]
 /* here we understand, whenever we use FILTER , we get a call back fn ,
@@ -28,4 +29,14 @@ const myNums = [1,2,3,4,5,6,7,8,9,10]
    those values who accept condn are returned other wise values are not returned */
    // So this is filter 
 
+//-----------------------------------------------------------------
+// if we want to do above thing using foreach::
+// const newNums =[]
+
+// myNums.forEach((num) => {
+//     if(num > 4){
+//         newNums.push(num)
+//     }
+// })
+// console.log(newNums); //[ 5, 6, 7, 8, 9, 10 ]
 
