@@ -8,3 +8,15 @@
 // console.log(values);
 // here undefined is the return value , so there is no value if we want to return value we have to return it manually ,as above. 
 // hence foreach is a undefined.
+
+//-----------------------------------------------------------------------------------------------------------
+
+/* FILTER OPERATION*/ // and it also take call back fn:
+const myNums = [1,2,3,4,5,6,7,8,9,10]
+
+/* const newNums = myNums.filter((num) => {
+    // num > 4 // it would return empty array []
+    so in scope {} we have to use return keyword 
+    return num > 4 //[ 5, 6, 7, 8, 9, 10 ]    
+ })   */
+
