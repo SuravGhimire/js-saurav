@@ -47,8 +47,8 @@ for (const [key,value] of map) {
     game2: 'GTA'
    }
 
-   for (const [key, value] of myObject) {
-    console.log(key,':-', value);
+//    for (const [key, value] of myObject) {
+//     console.log(key,':-', value);
     
-   }
+//    }
    // in this scenario for-of iteration is not working on object
