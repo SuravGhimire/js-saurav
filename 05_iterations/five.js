@@ -49,3 +49,32 @@ python 3 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
 cpp 4 [ 'js', 'ruby', 'java', 'python', 'cpp' ] */ 
 
 //here js is item , 0 is index and all remaining are array list ,so foreach has excess of all of these.
+
+// We have a secenario that a array has objects inside [{},{},{}], in this case for each are often used::
+
+const myCoding = [
+    {
+      languageName:"javascript",
+      languageFileName:"js"
+    },
+    {
+      languageName:"java",
+      languageFileName:"java"
+    },
+    {
+      languageName:"python",
+      languageFileName:"py"
+    }
+  ]
+  
+  myCoding.forEach( (item)=>{
+  // myCoding.forEach( (item,index,arr)=>{
+      
+    console.log(item.languageName,);
+  //   console.log(item.languageName,index,arr);
+    
+  } )
+  
+  /* javascript
+    java
+    python */
