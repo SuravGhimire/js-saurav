@@ -13,6 +13,29 @@ for (const num of arr) {
 
 const greetings = "Hello world !"
 for (const greet of greetings) {
-    console.log(`Each char is ${greet}`);
+    // console.log(`Each char is ${greet}`);
 }
 
+// Maps ::
+//  map itself is an object
+  /*The Map object holds key-value pairs and remembers the original insertion order of the keys.
+    Any value (both objects and primitive values) may be used as either a key or a value */
+
+const map = new Map()
+map.set('nep',"nepal")
+map.set('IN',"India")
+map.set('FR',"france")
+
+// console.log(map);
+//Map(3) { 'nep' => 'nepal', 'IN' => 'India', 'FR' => 'france' }
+
+for (const key of map) {
+    // console.log(key);
+}
+
+for (const [key,value] of map) {
+    console.log(key,':-', value);
+}
+/* nep :- nepal
+   IN :- India
+   FR :- france  */
