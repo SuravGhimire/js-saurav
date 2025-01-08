@@ -15,3 +15,12 @@ const coding = ["js","ruby","java","python","cpp"]
     java
     python
     cpp */ 
+
+    
+// another variation:: it is not necessary to write a function like this,
+//  we have a arrow function also.
+
+// coding.forEach( greet = () => {})  //basic arrow function.
+// coding.forEach(  (item) => {           //  // a call back fn, by removing name and ca write any thing in function defination.
+//  console.log(item);
+// })
