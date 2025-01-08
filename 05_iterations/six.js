@@ -20,3 +20,12 @@ const myNums = [1,2,3,4,5,6,7,8,9,10]
     return num > 4 //[ 5, 6, 7, 8, 9, 10 ]    
  })   */
 
+    
+// const newNums = myNums.filter((num) => num > 4)
+// console.log(newNums); //[ 5, 6, 7, 8, 9, 10 ]
+/* here we understand, whenever we use FILTER , we get a call back fn ,
+   inside which every value is access each ,then we have to give a condition,
+   those values who accept condn are returned other wise values are not returned */
+   // So this is filter 
+
+
