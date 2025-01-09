@@ -40,3 +40,39 @@ const myNums = [1,2,3,4,5,6,7,8,9,10]
 // })
 // console.log(newNums); //[ 5, 6, 7, 8, 9, 10 ]
 
+//--------------------------------------------------------------------------------------
+
+// reak world example of filter in database:
+const books =[
+    { title:'Book One', genre:'Friction', publish:1981,
+     edition :2004},
+    { title:'Book Two', genre:'Non-Friction', publish:2000,
+     edition :2004},
+    { title:'Book Three', genre:'History', publish:1986,
+     edition :2004},
+    { title:'Book 5', genre:'History', publish:2000,
+     edition :2004},
+    { title:'Book FOur', genre:'Science', publish:2101,
+     edition :2004}
+]
+/* Q) here user wants to use filter show only the book with genre History */
+let userBooks = books.filter( (bk) => bk.genre === 'History' )
+
+// console.log(userBooks);
+
+/* [
+  {
+    title: 'Book Three',
+    genre: 'History',
+    publish: 1981,
+    edition: 2004
+  }
+]   */
+
+   userBooks = books.filter ((bk) => {return bk.publish >= 2000})
+//    console.log(userBooks);
+
+// Q) book publish after 1981 and genre history
+userBooks = books.filter ((bk) => bk.publish >=1982 && bk.genre=== 'History')
+console.log(userBooks);
+   
