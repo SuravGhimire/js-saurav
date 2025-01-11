@@ -11,7 +11,24 @@
         <div class="day">tuesday</div>
         <div class="day">thursday</div>
         <div class="day">friday</div>
-
     </div>
 </body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children)
+    // console.log(parent.children[1].innerHTML);  //we can call any children from parent.
+    
+    // for (let i = 0; i < parent.children.length; i++) {   //looping on parent ,and observing the result in console.
+    //      console.log(parent.children[i].innerHTML); 
+    // }
+    parent.children[1].style.color="orange"
+    // console.log(parent.firstElementChild);  //<div class="day">monday</div>
+    // console.log(parent.lastElementChild);   //<div class="day">friday</div>
+
+    const dayOne = document.querySelector('.day')
+        console.log(dayOne);
+        
+    
+</script>
 </html>
