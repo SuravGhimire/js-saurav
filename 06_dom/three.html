@@ -26,6 +26,15 @@
  memory,not attached in page .How will it attach,we have to tell document to attach the particular child ,
  and we will attach that! */
    
+ //    div.innerText="chai aur code "
+ const addText= document.createTextNode("chai aur code")
+
+//now we add this node inside div,div append child 
+div.appendChild(addText)
+
+//finally attaching on document
+document.body.appendChild(div)  // chai aur code ,append in page in green color coz of style
+
   
 </script>
 </html>
