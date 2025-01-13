@@ -31,10 +31,33 @@ document.getElementById('lizard').addEventListener('click',function (){
 },) 
 // Otherappraches: attachEvent() used in early time
 //jQuery-on (eventlistner)
+
+//reading about events::type,timestamp,defaultPrevented
+// target,toElement,srcElement, currentTarget,
+//interview prospective:: clientX,clientY,screenX,screenY
+// altkey,ctrlkey,shiftkey,keyCode
 document.getElementById('ball').addEventListener('click',function (e){
     console.log(e);
     
-},) 
+},false) 
+//event propagation,,has two contexts: event bubbling,and event capturing 
+//how event propagation is done and how can we stop that;
+document.getElementById('image').addEventListener('click',function (e){
+    console.log("clicked inside the ul");
+    
+},false) // top to bottom id capturing
+document.getElementById('image').addEventListener('click',function (e){
+    console.log("clicked inside the ul");
+    
+},false)
+document.getElementById('tree').addEventListener('click',function (e){
+    console.log("tree clicked ");
+    
+},true)// bottom to top is bubbling
+
+
+
+
 
 </script>
 </html>
