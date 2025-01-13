@@ -12,16 +12,27 @@
 </body>
 <script>
     function addLanguage(lang){
-       const li= document.createElement('li');
-       li.innerHTML= `${langName}`
-       document.querySelector('.language').
+       const li= document.createElement('li');  // create element
+       li.innerHTML= `${langName}`          // add innerHTML
+       document.querySelector('.language').  
        appendChild(li)
     }/*it is a basic idea,where we create li ,put innerHTML inside that
     ,and attach in document/ or select a parent and attach it and where we have to append do appendChild and call value by method  */ 
     addLanguage("python")  // here we had add another language where we had created javascript already
     addLanguage("typescript")
 
-    //this method is suitable for only one li but if there were thousands of those that ,than there were some problems.
-    
+//this method is suitable for only one li but if there were thousands of those that ,than there were some problems.
+//------------------------------------------------------------------------------------------------
+//FOR large scale,same approach but a bit of optimized way
+function addOptiLanguage(langName) {
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName))  //in place of innerHTML we use appendChild,and create a new node(document.createTextNode)and langNAme is add directly.
+   document.querySelector('.language').appendChild(li)
+
+}
+//run
+addOptiLanguage('goLang')
+//this process is optimized cuz we dont have to traverse tree we can directly insert textNode and work is done directly
+
 </script>
 </html>
