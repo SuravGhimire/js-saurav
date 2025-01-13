@@ -32,7 +32,20 @@ function addOptiLanguage(langName) {
 }
 //run
 addOptiLanguage('goLang')
-//this process is optimized cuz we dont have to traverse tree we can directly insert textNode and work is done directly
+/* this process is optimized cuz we dont have to traverse tree,
+ we can directly insert textNode and work is done directly */
 
+ //Edit:
+const secondLang= document.querySelector("li:nth-child(2)")   //1st select using
+// secondLang.innerHTML="MOja"
+const newli=document.createElement('li')  //creating new element
+newli.textContent="Mojo"       
+secondLang.replaceWith(newli)  //replacing content with another element
+
+//edit:
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML='<li>TypeScript</li>'   //Javascript is changed by TypeScript
+
+   
 </script>
 </html>
