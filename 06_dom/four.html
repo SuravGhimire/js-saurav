@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212212; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){
+       const li= document.createElement('li');
+       li.innerHTML= `${langName}`
+       document.querySelector('.language').
+       appendChild(li)
+    }/*it is a basic idea,where we create li ,put innerHTML inside that
+    ,and attach in document/ or select a parent and attach it and where we have to append do appendChild and call value by method  */ 
+    addLanguage("python")  // here we had add another language where we had created javascript already
+    addLanguage("typescript")
+
+    //this method is suitable for only one li but if there were thousands of those that ,than there were some problems.
+    
+</script>
+</html>
