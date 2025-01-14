@@ -26,9 +26,9 @@
 //    } 
 //-------------------------------------------
 //3rd and final approach:
-document.getElementById('lizard').addEventListener('click',function (){
-    alert("lizard pop up")
-},) 
+// document.getElementById('lizard').addEventListener('click',function (){
+//     alert("lizard pop up")
+// },) 
 // Otherappraches: attachEvent() used in early time
 //jQuery-on (eventlistner)
 
@@ -36,24 +36,31 @@ document.getElementById('lizard').addEventListener('click',function (){
 // target,toElement,srcElement, currentTarget,
 //interview prospective:: clientX,clientY,screenX,screenY
 // altkey,ctrlkey,shiftkey,keyCode
-document.getElementById('ball').addEventListener('click',function (e){
-    console.log(e);
+
+// document.getElementById('ball').addEventListener('click',function (e){
+//     console.log(e);
     
-},false) 
+// },false) 
 //event propagation,,has two contexts: event bubbling,and event capturing 
 //how event propagation is done and how can we stop that;
-document.getElementById('image').addEventListener('click',function (e){
-    console.log("clicked inside the ul");
+// document.getElementById('image').addEventListener('click',function (e){
+//     console.log("clicked inside the ul");
     
-},false) // top to bottom id capturing
+// },false) //  bottom to top is bubbling
 document.getElementById('image').addEventListener('click',function (e){
     console.log("clicked inside the ul");
+    e.stopPropagation();  //it prevents event bubbling and dont go to upper element.
     
 },false)
+
 document.getElementById('tree').addEventListener('click',function (e){
     console.log("tree clicked ");
     
-},true)// bottom to top is bubbling
+},true)//top to bottom is capturing 
+/*clicked inside the ul
+one.html:94 tree clicked  */
+
+//
 
 
 
