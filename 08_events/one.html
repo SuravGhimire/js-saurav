@@ -60,7 +60,15 @@ document.getElementById('tree').addEventListener('click',function (e){
 /*clicked inside the ul
 one.html:94 tree clicked  */
 
-//
+//-------------------------------------------------------------------------------------------
+//Default behaviour change:
+
+document.getElementById('google').addEventListener
+('click',function(e){
+    e.preventDefault();
+    console.log("google clicked");
+    e.stopPropagation();  //it stop bubbling
+},false)  //it prevented default value of google when clicked.
 
 
 
