@@ -21,56 +21,70 @@
     </div>
 </body>
 <script>
-//    document.getElementById('ball').onclick = function () {
-//     alert("ball clicked")    // 2nd appro ,this is a bit old approach.
-//    } 
-//-------------------------------------------
-//3rd and final approach:
-// document.getElementById('lizard').addEventListener('click',function (){
-//     alert("lizard pop up")
-// },) 
-// Otherappraches: attachEvent() used in early time
-//jQuery-on (eventlistner)
 
-//reading about events::type,timestamp,defaultPrevented
-// target,toElement,srcElement, currentTarget,
-//interview prospective:: clientX,clientY,screenX,screenY
-// altkey,ctrlkey,shiftkey,keyCode
+// //    document.getElementById('ball').onclick = function () {
+// //     alert("ball clicked")    // 2nd appro ,this is a bit old approach.
+// //    } 
+// //-------------------------------------------
+// //3rd and final approach:
+// // document.getElementById('lizard').addEventListener('click',function (){
+// //     alert("lizard pop up")
+// // },) 
+// // Otherappraches: attachEvent() used in early time
+// //jQuery-on (eventlistner)
 
-// document.getElementById('ball').addEventListener('click',function (e){
-//     console.log(e);
+// //reading about events::type,timestamp,defaultPrevented
+// // target,toElement,srcElement, currentTarget,
+// //interview prospective:: clientX,clientY,screenX,screenY
+// // altkey,ctrlkey,shiftkey,keyCode
+
+// // document.getElementById('ball').addEventListener('click',function (e){
+// //     console.log(e);
     
-// },false) 
-//event propagation,,has two contexts: event bubbling,and event capturing 
-//how event propagation is done and how can we stop that;
+// // },false) 
+// //event propagation,,has two contexts: event bubbling,and event capturing 
+// //how event propagation is done and how can we stop that;
+// // document.getElementById('image').addEventListener('click',function (e){
+// //     console.log("clicked inside the ul");
+    
+// // },false) //  bottom to top is bubbling
 // document.getElementById('image').addEventListener('click',function (e){
 //     console.log("clicked inside the ul");
+//     e.stopPropagation();  //it prevents event bubbling and dont go to upper element.
     
-// },false) //  bottom to top is bubbling
-document.getElementById('image').addEventListener('click',function (e){
-    console.log("clicked inside the ul");
-    e.stopPropagation();  //it prevents event bubbling and dont go to upper element.
+// },false)
+
+// document.getElementById('tree').addEventListener('click',function (e){
+//     console.log("tree clicked ");
     
-},false)
+// },true)//top to bottom is capturing 
+// /*clicked inside the ul
+// one.html:94 tree clicked  */
 
-document.getElementById('tree').addEventListener('click',function (e){
-    console.log("tree clicked ");
-    
-},true)//top to bottom is capturing 
-/*clicked inside the ul
-one.html:94 tree clicked  */
+// //-------------------------------------------------------------------------------------------
+// //Default behaviour change:
 
-//-------------------------------------------------------------------------------------------
-//Default behaviour change:
+// document.getElementById('google').addEventListener
+// ('click',function(e){
+//     e.preventDefault();
+//     console.log("google clicked");
+//     e.stopPropagation();  //it stop bubbling
+// },false)  //it prevented default value of google when clicked.
 
-document.getElementById('google').addEventListener
+
+//Example:: An event (li) of images get vanish when click::
+
+document.querySelector('#image').addEventListener
 ('click',function(e){
-    e.preventDefault();
-    console.log("google clicked");
-    e.stopPropagation();  //it stop bubbling
-},false)  //it prevented default value of google when clicked.
-
-
+ console.log(e.target.tagName);  //it shoes tag of elemeng like li,img etc.
+ 
+ if(e.target.tagName==='IMG'){  //here we use if statement cuz while we had click on ul then all images were removes so we use condition using tagName.
+    console.log(e.target.id);
+    
+ let removeIt = e.target.parentNode
+ removeIt.remove()}
+// removeIt.parentNode.removeChild(removeIt)
+},false)
 
 
 
