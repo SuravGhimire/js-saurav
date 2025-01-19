@@ -29,9 +29,19 @@
 
      const changeText = function() {document.querySelector('h1').innerHTML
      ="best js series"}
-     setTimeout(changeText,2000)  //here the chai aur code in h1 will change to best series....after 2 sec.
+    //  setTimeout(changeText,2000)  //here the chai aur code in h1 will change to best series....after 2 sec.
 
-     
+     //-------------------------------------------------------------------------------------------------------
+     //But what if I want to stop the changes befote the setTimeout,In above we create stop button to do that thing.
+     const changeMe = setTimeout(changeText,2000)
+    //  clearTimeout() //it need reference that which timeout should be removed
+     //so we do that stop time in as event that is button.
+     document.querySelector('#stop').
+     addEventListener('click', ()=>{
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+        
+     })     //so when we click stop button before the time out it wouldn't be change .and STOPPED will be printed cause of console.log
 
 </script>
 </html>
