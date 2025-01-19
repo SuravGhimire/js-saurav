@@ -20,6 +20,18 @@
         
      },10000);       //give me an interval after that interval i will complete function
 
+     const SaySaurav= function(){
+        console.log("saurav ghimire");
+     }
+     setTimeout(SaySaurav,2000) //giving reference ,dont execute
+    //  document.querySelector('h1').innerHTML
+    //  ="best js series"    //it instantly change when we write,but we want to give timeout
+
+     const changeText = function() {document.querySelector('h1').innerHTML
+     ="best js series"}
+     setTimeout(changeText,2000)  //here the chai aur code in h1 will change to best series....after 2 sec.
+
      
+
 </script>
 </html>
