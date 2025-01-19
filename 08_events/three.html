@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    const sayDate  = (str) => {
+        console.log(str,Date.now());
+        
+    }
+    // setInterval(sayDate, 1000, "hi");       //passing reference,we can also pass parameter(hi).
+// the browser is running and running so we have to stop that also
+
+    const intervelId= setInterval(sayDate, 1000, "hi");
+    clearInterval(intervelId) // it clears all the vlaues in browser.
+
+    // now we have to do that : when start button is clicked the browser start and when we click stop it stopped.
+
+    document.querySelector('#start').
+    addEventListener('click', () => {
+        setInterval(sayDate,2000,"hi")
+        console.log("sarted");
+        
+    })
+
+    document.querySelector('#stop').
+    addEventListener('click', () => {
+        clearInterval(sayDate,1000)
+        console.log("cleared");
+        
+    })
+</script>
+</html>
